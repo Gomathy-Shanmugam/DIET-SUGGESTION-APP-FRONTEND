@@ -20,6 +20,11 @@ This project has been successfully deployed using Render for both backend compon
 
 <hr style="border: 1px solid black;">
 
+For Login I used
+
+Email:suba01@gmail.com
+password:123
+
 <b>Tools Used</b>
 <ul>
   <li>Visual Studio Code</li>

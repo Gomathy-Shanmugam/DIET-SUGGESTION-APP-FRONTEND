@@ -1,8 +1,51 @@
-# React + Vite
+<b>DIET SUGGESTION APP </b>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a MERN (MongoDB, Express.js, React.js, Node.js) based web application designed to provide nutritional diet tracking capabilities.
 
-Currently, two official plugins are available:
+In this web application, users can track the nutritional content of the food they consume each day. They can monitor their daily nutritional intake and strive towards a healthier lifestyle.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<b>Features</b>
+<ul>
+  <li><b>Login:</b> Allows users to log in to their accounts. </li>
+  <li><b>Register:</b> Enables new users to create accounts.</li>
+  <li><b>Home Page:</b> Serves as the main landing page of the application.</li>
+  <li><b>Create Food Page:</b> Allows users to input and save details of the food they consume.</li>
+  <li><b>Tracking Page:</b> Provides a platform for users to track their daily nutritional intake.</li>
+  <li><b>Diet Suggestion Page:</b> Offers suggestions and recommendations for a balanced diet.</li>
+</ul>
+<hr> 
+
+<b>Deployment</b><br>
+This project has been successfully deployed using Render for both backend components and Netlify for forntend. Render provides a seamless deployment experience with easy scaling and management of web applications.
+
+<hr style="border: 1px solid black;">
+
+<b>Tools Used</b>
+<ul>
+  <li>Visual Studio Code</li>
+  <li>Git</li>
+  <li>Netlify</li>
+  <li>Render</li>
+</ul>
+
+<hr>
+
+<b>Screenshots</b>
+
+1.Home page
+<img src = "https://github.com/Gomathy-Shanmugam/DIET-SUGGESTION-APP-FRONTEND/assets/113160365/0094fedf-22fd-412e-b858-6b0b860611bc">
+
+2.Diet page
+<img src = "https://github.com/Gomathy-Shanmugam/DIET-SUGGESTION-APP-FRONTEND/assets/113160365/9ec9af9d-f4c2-4b75-9c6b-d8973e84ee35">
+
+3.Adding food page
+<img src = "https://github.com/Gomathy-Shanmugam/DIET-SUGGESTION-APP-FRONTEND/assets/113160365/d0ae3af0-b602-4327-86f9-877fa63d4ff5">
+
+4.Food tracking page
+<img src = "https://github.com/Gomathy-Shanmugam/DIET-SUGGESTION-APP-FRONTEND/assets/113160365/69e6e4bf-0848-45a1-b89c-103ac9a68552">
+
+
+
+
+
+

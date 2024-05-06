@@ -1,0 +1,289 @@
+.loginWrapper {
+  margin: auto;
+  margin-top: 150px;
+  width: 50%;
+  margin-left: 400px;
+}
+.loginWrapper h3 {
+  text-align: center;
+}
+.registerWrapper {
+  margin: auto;
+  margin-top: 120px;
+  width: 50%;
+  margin-left: 400px;
+}
+
+/* Not found page css */
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: "Arvo", serif;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+}
+.contant_box_404 {
+  margin-top: -50px;
+}
+
+/* Track Page Css */
+
+.search {
+  width: 100%;
+}
+
+.track-container {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.search-inp {
+  width: 100%;
+  height: 45px;
+  text-indent: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 18px;
+}
+
+.search {
+  position: relative;
+}
+
+.search-results {
+  width: 300px;
+  padding: 10px 5px;
+  background-color: #e9ecde;
+  margin-top: 10px;
+  position: absolute;
+}
+
+.food {
+  width: 100%;
+  padding: 30px 0px;
+  row-gap: 10px;
+}
+.nutrition {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+.food-img {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.food-image {
+  width: 100%;
+}
+
+.nutrient {
+  width: 50%;
+  padding: 10px 0px;
+}
+
+.diet-container {
+  position: relative;
+  align-items: flex-start;
+  margin-top: 50px;
+  flex-direction: column;
+
+}
+
+.item {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* navbar css */
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: white;
+}
+.banner {
+  /* position: relative;
+  height: 100vh;  */
+  background-image: url("https://healthydietindia.com/wp-content/themes/healthydiet/assets/images/ban-m.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  border-top: 6px solid #85b733;
+}
+.banners {
+  position: relative;
+  height: 100vh;
+  background-image: url("https://healthydietindia.com/wp-content/themes/healthydiet/assets/images/ban-m.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  border-top: 6px solid #85b733;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.banner-image {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo {
+  max-width: 400px;
+}
+
+/* about us */
+
+.about-us-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.green-italic {
+  color: green;
+  font-style: italic;
+}
+/* Quotes */
+.catchy-quote {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 15px;
+  margin-top: 5px;
+  margin-bottom: 16px;
+  color: #33b749;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", "cursive", Arial, sans-serif;
+}
+
+.typewriter {
+  font-style: italic;
+  font-size: 30px;
+  overflow: hidden;
+  border-right: 0.15em solid green;
+  white-space: nowrap;
+  margin: 12px;
+
+  animation: typewriter 3s steps(40) 1s forwards;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: auto;
+  }
+}
+
+/* create form page */
+
+.card {
+  width: 800px;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .loginWrapper,
+  .registerWrapper,
+  .card {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+
+  .banner,
+  .banners {
+    height: 50vh;
+  }
+
+  .banner-content {
+    top: 40%;
+  }
+
+  .banner-image {
+    bottom: -20px;
+  }
+
+  .about-us-section {
+    flex-direction: column;
+  }
+
+  .content,
+  .image {
+    padding: 0;
+    flex: none;
+    width: 100%;
+  }
+
+  .catchy-quote {
+    font-size: 20px;
+  }
+  .n-text {
+    font-size: 10px;
+    line-height: 1;
+  }
+}

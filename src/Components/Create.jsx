@@ -86,7 +86,7 @@ function Create() {
         <div className="create m-5 ">
           <div className="row">
             <div className="col-md-8 offset-md-2">
-              <div className="card ms-4 mt-4">
+              <div className="card ms-2 mt-2">
                 <div className="card-body">
                   <h4 className="card-title text-center">
                     Create Food Details
@@ -211,7 +211,7 @@ function Create() {
 
                         <button
                           type="submit"
-                          className="btn btn-primary btn-block mt-4"
+                          className="btn btn-primary btn-block mt-2"
                         >
                           Create Details
                         </button>

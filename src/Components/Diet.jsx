@@ -34,6 +34,7 @@ function Diet() {
         );
         const data = response.data;
         console.log(data);
+
         setitem(data);
 
         if (response.status === 200) {
@@ -73,10 +74,10 @@ function Diet() {
   }
 
   return (
-    <div className="banner">
+    <div className="banner ">
       <div className="container diet-container ">
         <Header></Header>
-        <div className="content ms-5">
+        <div className="content ms-5 ">
           <h1 className="text " style={{ color: "green" }}>
             Amount of food u eaten using date
           </h1>

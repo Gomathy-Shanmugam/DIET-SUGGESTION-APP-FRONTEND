@@ -278,4 +278,11 @@
     font-size: 10px;
     line-height: 1;
   }
+  .fixed-top {
+    padding: 10px;
+  }
+  .food-img {
+    max-height: 200px;
+    max-width: 150px;
+  }
 }

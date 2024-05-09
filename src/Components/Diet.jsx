@@ -22,9 +22,10 @@ function Diet() {
     const fetchData = async () => {
       try {
         const response = await AxiosService.get(
-          `${ApiRoutes.TRACK_DATE.path}/${loggedData.user.userid}/${
-            date.getMonth() + 1
-          }-${date.getDate()}-${date.getFullYear()}`,
+          `${ApiRoutes.TRACK_DATE.path}/${
+            loggedData.user.userid
+          }/${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`,
+
           {
             headers: {
               Authorization: `Bearer ${loggedData.user.token}`,
@@ -32,11 +33,12 @@ function Diet() {
           }
         );
         const data = response.data;
-        console.log("Fetched data:", data);
+        console.log(data);
         setitem(data);
 
         if (response.status === 200) {
           toast.success("Food tracked successfully");
+          console.log("Food tracked successfully:", data);
         } else {
           console.log("Error  in tracking food:", data);
         }
@@ -85,18 +87,21 @@ function Diet() {
             }}
             style={{ width: "300px", height: "40px", fontSize: "16px" }}
           />
+
           {item.map((item) => {
             return (
               <div className="item" key={item._id}>
                 <h4>
-        {item.foodId && item.foodId.name} ({item.details.calories} Kcal for{" "}
-        {item.quantity})g
-      </h4>
-                <p>Protein : {item.details.protein}g</p>
-                <p>Carbohydarate : {item.details.carbohydrate}g</p>
-                <p>Fibre : {item.details.fibre}g</p>
-                <p>Fat : {item.details.fat}g</p>
-             
+                  {item.foodId && item.foodId.name} (
+                  {item.details && item.details.calories}
+                  Kcal for {item.quantity})g
+                </h4>
+                <p>Protein : {item.details && item.details.protein}g</p>
+                <p>
+                  Carbohydarate : {item.details && item.details.carbohydrate}g
+                </p>
+                <p>Fibre : {item.details && item.details.fibre}g</p>
+                <p>Fat : {item.details && item.details.fat}g</p>
               </div>
             );
           })}

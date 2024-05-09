@@ -54,6 +54,7 @@ function Food(props) {
       const response = await AxiosService.post(
         ApiRoutes.TRACK_ITEM.path,
         trackData,
+
         {
           headers: {
             Authorization: `Bearer ${loggedData.user.token}`,
@@ -63,7 +64,7 @@ function Food(props) {
       );
 
       const data = response.data;
-
+      console.log(trackData);
       if (response.status === 201) {
         console.log("Food tracked successfully:", data);
         toast.success("Food addedd successfully");

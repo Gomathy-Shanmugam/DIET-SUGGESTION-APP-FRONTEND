@@ -32,6 +32,7 @@ function Diet() {
           }
         );
         const data = response.data;
+        console.log("Fetched data:", data);
         setitem(data);
 
         if (response.status === 200) {
@@ -95,12 +96,13 @@ function Diet() {
                 <p>Carbohydarate : {item.details.carbohydrate}g</p>
                 <p>Fibre : {item.details.fibre}g</p>
                 <p>Fat : {item.details.fat}g</p>
+             
               </div>
             );
           })}
 
           <div className="item ">
-            <h3 className="titlt" style={{ color: "red" }}>
+            <h3 className="title" style={{ color: "red" }}>
               Total Calories : {total.totalCalories} Kcal
             </h3>
             <p>Protein : {total.totalProtein}g</p>

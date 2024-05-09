@@ -86,7 +86,7 @@ function Create() {
         <div className="create m-5 ">
           <div className="row">
             <div className="col-md-8 offset-md-2">
-              <div className="card ms-2 mt-2">
+              <div className="card ms-5 mt-2">
                 <div className="card-body">
                   <h4 className="card-title text-center">
                     Create Food Details

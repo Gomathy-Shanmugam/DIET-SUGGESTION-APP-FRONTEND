@@ -23,7 +23,11 @@ function Header() {
                   <b>Home</b>
                 </Link>
               </li>
-              
+              <li>
+                <Link className="nav-link m-2 p-2" to="/bmi">
+                  <b>BMI</b>
+                </Link>
+              </li>
               <li>
                 <Link className="nav-link m-2 p-2" to="/track">
                   <b>Track </b>

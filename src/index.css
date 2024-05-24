@@ -286,3 +286,11 @@
     max-width: 150px;
   }
 }
+
+/* bmi page */
+.bmi {
+  display: flex;
+  justify-content: center;
+  margin-top: 110px;
+}
+

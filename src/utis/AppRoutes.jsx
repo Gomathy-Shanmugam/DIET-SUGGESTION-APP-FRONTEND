@@ -7,6 +7,7 @@ import Private from "../Components/Private";
 import Home from "../Components/Home";
 import Create from "../Components/Create";
 import Diet from "../Components/Diet";
+import BMI from "../Components/BMI";
 
 const Approutes = [
   {
@@ -20,6 +21,10 @@ const Approutes = [
   {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "/bmi",
+    element: <BMI />,
   },
   {
     path: "/track",

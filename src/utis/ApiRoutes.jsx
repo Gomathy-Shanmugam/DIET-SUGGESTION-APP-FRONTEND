@@ -24,10 +24,10 @@ const ApiRoutes = {
     path: "/trackings/track",
     authenticate: true,
   },
-  BMI_CALCULATOR:{
-    path:"/bmi/calculate-bmi",
+  BMI_CALCULATOR: {
+    path: "/bmi/calculate-bmi",
     authenticate: true,
-  }
+  },
 };
 
 export default ApiRoutes;

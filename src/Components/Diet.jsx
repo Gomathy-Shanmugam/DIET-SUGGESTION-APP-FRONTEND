@@ -5,6 +5,7 @@ import AxiosService from "../utis/AxiosService";
 import ApiRoutes from "../utis/ApiRoutes";
 import toast from "react-hot-toast";
 import Header from "./Header";
+import Food from "./Food";
 
 function Diet() {
   let loggedData = useContext(UserContext);
@@ -32,6 +33,7 @@ function Diet() {
             },
           }
         );
+        console.log(response)
         const data = response.data;
         console.log(data);
 
@@ -64,11 +66,11 @@ function Diet() {
       totalFibre: 0,
     };
     item.forEach((item) => {
-      totalCopy.totalCalories += item.details.calories;
-      totalCopy.totalProtein += item.details.protein;
-      totalCopy.totalCarbohydrate += item.details.carbohydrate;
-      totalCopy.totalFibre += item.details.fibre;
-      totalCopy.totalFat += item.details.fat;
+      totalCopy.totalCalories += item.details.calories || 0;
+      totalCopy.totalProtein += item.details.protein || 0;
+      totalCopy.totalCarbohydrate += item.details.carbohydrate || 0;
+      totalCopy.totalFibre += item.details.fibre || 0;
+      totalCopy.totalFat += item.details.fat || 0;
     });
     settotal(totalCopy);
   }
@@ -93,16 +95,13 @@ function Diet() {
             return (
               <div className="item" key={item._id}>
                 <h4>
-                  {item.foodId && item.foodId.name} (
-                  {item.details && item.details.calories}
-                  Kcal for {item.quantity})g
+                {item.foodId?.name || "Unknown Food"} (
+                  {item.details?.calories || 0} Kcal for {item.quantity}g)
                 </h4>
-                <p>Protein : {item.details && item.details.protein}g</p>
-                <p>
-                  Carbohydarate : {item.details && item.details.carbohydrate}g
-                </p>
-                <p>Fibre : {item.details && item.details.fibre}g</p>
-                <p>Fat : {item.details && item.details.fat}g</p>
+                <p>Protein: {item.details?.protein || 0}g</p>
+                <p>Carbohydrate: {item.details?.carbohydrate || 0}g</p>
+                <p>Fibre: {item.details?.fibre || 0}g</p>
+                <p>Fat: {item.details?.fat || 0}g</p>
               </div>
             );
           })}
@@ -121,5 +120,5 @@ function Diet() {
     </div>
   );
 }
-
 export default Diet;
+

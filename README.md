@@ -12,6 +12,7 @@ In this web application, users can track the nutritional content of the food the
   <li><b>Create Food Page:</b> Allows users to input and save details of the food they consume.</li>
   <li><b>Tracking Page:</b> Provides a platform for users to track their daily nutritional intake.</li>
   <li><b>Diet Suggestion Page:</b> Offers suggestions and recommendations for a balanced diet.</li>
+  <li><b>BMI Page: </b>User can caluculate therir bmi based on the bmi the app will give the nutritional suggestion</li>
 </ul>
 <hr> 
 
@@ -49,6 +50,8 @@ password:123
 4.Food tracking page
 <img src = "https://github.com/Gomathy-Shanmugam/DIET-SUGGESTION-APP-FRONTEND/assets/113160365/69e6e4bf-0848-45a1-b89c-103ac9a68552">
 
+5.BMI 
+<img src = "https://github.com/Gomathy-Shanmugam/DIET-SUGGESTION-APP-FRONTEND/assets/113160365/3a29c76d-b4d8-4e97-aa90-76811e8e7b67">
 
 
 

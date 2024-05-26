@@ -5,7 +5,6 @@ import AxiosService from "../utis/AxiosService";
 import ApiRoutes from "../utis/ApiRoutes";
 import toast from "react-hot-toast";
 import Header from "./Header";
-import Food from "./Food";
 
 function Diet() {
   let loggedData = useContext(UserContext);
@@ -23,9 +22,9 @@ function Diet() {
     const fetchData = async () => {
       try {
         const response = await AxiosService.get(
-          `${ApiRoutes.TRACK_DATE.path}/${
-            loggedData.user.userid
-          }/${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`,
+          `${ApiRoutes.TRACK_DATE.path}/${loggedData.user.userid}/${
+            date.getMonth() + 1
+          }-${date.getDate()}-${date.getFullYear()}`,
 
           {
             headers: {
@@ -33,9 +32,8 @@ function Diet() {
             },
           }
         );
-        console.log(response)
+
         const data = response.data;
-        console.log(data);
 
         setitem(data);
 
@@ -80,9 +78,10 @@ function Diet() {
       <div className="container diet-container ">
         <Header></Header>
         <div className="content ms-5 ">
-          <h1 className="text " style={{ color: "green" }}>
-            Amount of food u eaten using date
-          </h1>
+          <h2 className="text ms-3 p-3" style={{ fontFamily: "" }}>
+            Amount of food you ate on{" "}
+            <span style={{ color: "red" }}>{date.toDateString()}</span>
+          </h2>
           <input
             type="date"
             onChange={(event) => {
@@ -95,7 +94,7 @@ function Diet() {
             return (
               <div className="item" key={item._id}>
                 <h4>
-                {item.foodId?.name || "Unknown Food"} (
+                  {item.foodId?.name || "Unknown Food"} (
                   {item.details?.calories || 0} Kcal for {item.quantity}g)
                 </h4>
                 <p>Protein: {item.details?.protein || 0}g</p>
@@ -121,4 +120,3 @@ function Diet() {
   );
 }
 export default Diet;
-

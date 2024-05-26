@@ -70,16 +70,26 @@ const BMI = () => {
       setNutritionalIntakeSuggestion("");
     }
   };
+  const handleClear = () => {
+    setHeight("");
+    setWeight("");
+    setBmi(null);
+    setBmiCategory("");
+    setNutritionalIntakeSuggestion("");
+    setError(null);
+    setRotationAngle(0);
+  };
 
   return (
     <div className="banners">
       <div className="container">
         <Header />
-        <div className="bmi">
-          <div>
-            <h1 className="text" style={{ color: "green" }}>
+        <div>
+          <div className="bmi">
+            <h1 className="text " style={{ color: "green" }}>
               Calculate Your BMI
             </h1>
+
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label>
@@ -105,26 +115,38 @@ const BMI = () => {
                   />
                 </label>
               </div>
+
               <button class="btn btn-primary" type="submit">
                 Calculate BMI
               </button>
+              <button
+                className="btn btn-secondary"
+                type="button"
+                onClick={handleClear}
+                style={{ marginLeft: "10px" }}
+              >
+                Clear
+              </button>
             </form>
-            {bmi && (
-              <div className="mb-3">
-                <p>
-                  <b>Your BMI is :</b> {bmi}
-                </p>
-                <p>
-                  <b>BMI Category :</b> {bmiCategory}
-                </p>
-                <p>
-                  <b>Nutritional Intake Suggestion :</b>{" "}
-                  {nutritionalIntakeSuggestion}
-                </p>
-              </div>
-            )}
-            {error && <p style={{ color: "red" }}>{error}</p>}
           </div>
+          {bmi && (
+            <div className="bmi-text mt-3" style={{ color: "green" }}>
+              <h5>
+                Your BMI is : <span style={{ color: "red" }}>{bmi}</span>
+              </h5>
+              <h5>
+                BMI Category :
+                <span style={{ color: "red" }}>{bmiCategory}</span>
+              </h5>
+              <h5>
+                Nutritional Intake Suggestion :{" "}
+                <span style={{ color: "red" }}>
+                  {nutritionalIntakeSuggestion}
+                </span>
+              </h5>
+            </div>
+          )}
+          {error && <p style={{ color: "red" }}>{error}</p>}
         </div>
       </div>
       <div style={{ padding: "10px", textAlign: "center" }}>

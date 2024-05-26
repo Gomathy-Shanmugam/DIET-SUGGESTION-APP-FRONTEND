@@ -290,7 +290,11 @@
 /* bmi page */
 .bmi {
   display: flex;
-  justify-content: center;
-  margin-top: 110px;
+  align-items: center;
+  flex-direction: column;
+ margin-top: 100px;
+ 
 }
-
+.bmi-text {
+  margin-left: 200px;
+}
